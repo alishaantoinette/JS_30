@@ -43,4 +43,16 @@ body {
   background: black;
   position: absolute;
   top: 50%;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  transition: all 0.05s;
+  transition-timing-function: ease-in-out;
+}
+
+.hour-hand {}
+
+.minute-hand {}
+
+.second-hand {
+  transform: rotate(-90deg)
 }
