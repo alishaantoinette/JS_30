@@ -6,15 +6,10 @@
 html {
   background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
   background-size: cover;
-  /* font-family: 'helvetica neue'; */
-  /* text-align: center; */
-  /* font-size: 10px; */
 }
 
 body {
-  /* font-size: 2rem; */
   display: flex;
-  /* flex: 1; */
   min-height: 100vh;
   align-items: center;
 }
@@ -40,19 +35,24 @@ body {
 .hand {
   width: 50%;
   height: 6px;
-  background: black;
+  background: white;
   position: absolute;
   top: 50%;
   transform: rotate(90deg);
+  /* rotate the clock hand divs so that they start in the "12" position instead of at the "9" */
   transform-origin: 100%;
+  /* rotate on the far right side (the bottom after the rotation above) of the div instead of the middle */
   transition: all 0.05s;
   transition-timing-function: ease-in-out;
 }
 
-.hour-hand {}
-
-.minute-hand {}
+.hour-hand {
+  width: 40%;
+  left: 40px;
+}
 
 .second-hand {
-  transform: rotate(-90deg)
+  transform: rotate(-90deg);
+  height: 4px;
+  background: slategrey;
 }
