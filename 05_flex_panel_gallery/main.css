@@ -77,18 +77,18 @@ body {
 
 .panel>*:first-child {
   transform: translateY(-100%);
-  /* select the first child element inside of each .panel div and move it up 100% */
+  /* select the first child element inside of each .panel div and move it up 100% (off screen) */
 }
 
 .panel>*:last-child {
   transform: translateY(100%);
-  /* select the last child element inside of each .panel div and move it down 100% */
+  /* select the last child element inside of each .panel div and move it down 100% (off screen) */
 }
 
 .panel.open-active>*:first-child,
 .panel.open-active>*:last-child {
   transform: translateY(0);
-  /* when the "open-active" class is on the first and last elements inside of each .panel div move the elements back to their original positions */
+  /* when the "open-active" class is added to the first and last elements inside of each .panel div, move the elements back to their original positions (on screen) */
 }
 
 .panel p {
