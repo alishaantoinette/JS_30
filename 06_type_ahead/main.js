@@ -21,7 +21,14 @@ const findMatchingCitiesAndStates = (charactersThatWereTyped, cityData) =>
   });
 
 const showMatchingCitiesAndStates = () => {
-  const matches = findMatchingCitiesAndStates(event.target.value, cityData); 
+  const matchesArray = findMatchingCitiesAndStates(event.target.value, cityData); 
+  const matchesListItems = matchesArray.map( match => `
+    <li>
+      <span class='location'>${match.city}, ${match.state}</span>
+      <span class='population'>${match.population}</span>
+    </li>
+    `).join('');
+  matchingCitiesAndStates.innerHTML = matchesListItems;
 };
 
 const charactersBeingTyped = document.querySelector('.search');
