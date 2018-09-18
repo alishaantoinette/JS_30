@@ -16,12 +16,12 @@ const comments = [
 
 // Some and Every Checks
 // Array.prototype.some() // is at least one person 19 or older?
-const oneNineteenOrOlder = people.some(person => ((new Date().getFullYear() - person.year) >= 19));
-console.log({ oneNineteenOrOlder });
+const oneIsNineteenOrOlder = people.some(person => ((new Date().getFullYear() - person.year) >= 19));
+console.log({ oneIsNineteenOrOlder });
 
 // Array.prototype.every() // is everyone 19 or older?
-const allNineteenOrOlder = people.every(person => ((new Date().getFullYear() - person.year) >= 19));
-console.log({ allNineteenOrOlder });
+const allAreNineteenOrOlder = people.every(person => ((new Date().getFullYear() - person.year) >= 19));
+console.log({ allAreNineteenOrOlder });
 
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
@@ -32,3 +32,7 @@ console.log({ findId });
 // Array.prototype.findIndex()
 // Find the comment with this ID
 // delete the comment with the ID of 823423
+const findIndex = comments.findIndex(comment => comment.id === 823423);
+const deleteId = comments.splice(findIndex, 1);
+console.log({ deleteId });
+console.log({ comments });
