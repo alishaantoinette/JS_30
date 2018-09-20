@@ -1,9 +1,9 @@
 'use strict';
 
 const makeGold = () => {
-  const para = document.querySelector('h1');
-  para.style.color = '#deaf17';
-  para.style.fontSize = '50px';
+  const title = document.querySelector('h1');
+  title.style.color = '#deaf17';
+  title.classList = 'extra';
 };
 
 // Regular
