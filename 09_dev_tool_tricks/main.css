@@ -1,0 +1,9 @@
+body {
+  text-align: center;
+  padding-top: 200px;
+}
+
+p {
+  font-style: italic;
+  color: lightslategray;
+}
